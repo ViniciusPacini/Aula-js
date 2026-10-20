@@ -96,7 +96,7 @@ if (total > 100) {
 console.log(frete);*/
 
 //Tipos Primitivos
-const preco = 19.9;
+/*const preco = 19.9;
 console.log(typeof preco);
 
 const nome = "Vinicius";
@@ -109,4 +109,82 @@ const vazio = null;
 console.log(typeof vazio);
 
 let indefinido;
-console.log(typeof indefinido);
+console.log(typeof indefinido);*/
+
+//Strings e Template Literals
+/*const nome1 = "Lucas";
+const nome2 = "Maria";
+const nome3 = `João`;
+const idade = 16
+const nomeCompleto = "Vinícius Martins Pacini"
+
+console.log(nomeCompleto.length);
+console.log(nomeCompleto.toUpperCase());
+console.log(nomeCompleto.toLowerCase());
+
+console.log(`Olá, meu nome é ${nomeCompleto} e tenho ${idade}anos.`)*/
+
+//COnversões de Tipo
+/*console.log(Number("123"));
+console.log(parseInt("10.9"));
+console.log(parseFloat("10.9"));
+console.log(String(123));
+
+console.log(Boolean(0));
+console.log(Boolean(1));
+console.log(Boolean(""));
+
+const texto1 = prompt("Digite um número:");
+const texto = Number(prompt("Digite um número:"));
+
+console.log(texto + 5);*/
+
+//Arredondando e formando números
+
+/*const preco = 19.987;
+
+console.log(preco.toFixed(2));
+console.log(Math.round(preco));
+console.log(Math.floor(preco));
+console.log(Math.ceil(preco));*/
+
+//Operadores Aritimáticos
+
+/*console.log(2 + 3);
+console.log(5 - 2);
+console.log(4 * 2);
+console.log(10 / 2);
+console.log(10 % 3);
+console.log(2 ** 3);*/
+
+//Operadores de Comparação
+
+/*console.log(5 == "5"); // igual frouxo
+console.log(5 == 5); // igual frouxo
+
+console.log(5 == "5") //igual estrito
+console.log(5 == 5) //igual estrito
+
+console.log(5 != "5") //diferente frouxo
+console.log(5 != 7) //diferente frouxo
+
+console.log(5 != "5") //diferente estrito
+console.log(5 != 7) //diferente estrito*/
+
+// Média de duas notas
+
+/*const n1 = Number(prompt("Primeira nota:"));
+const n2 = Number(prompt("Segunda nota:"));
+
+const media = (n1 + n2) / 2;
+
+console.log(`Média: ${media.toFixed(1)}`);*/
+
+//IMC (Índice de Massa Corporal)
+
+const peso = Number(prompt("DIgite seu peso (kg):"));
+const altura = Number(prompt("Altura (m)"));
+
+const imc = peso / (altura **2);
+
+console.log(`IMC: ${imc.toFixed(2)}`);
