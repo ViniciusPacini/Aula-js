@@ -133,7 +133,7 @@ if (Number.isNaN(valor) || valor < 0) {
 
 **Exemplo:** `4`, `9` e `7` → `O maior número é: 9`*/
 
-const numero1 = Number(prompt("Digite o primeiro valor:"));
+/*const numero1 = Number(prompt("Digite o primeiro valor:"));
 const numero2 = Number(prompt("Digite o segundo valor:"));
 const numero3 = Number(prompt("Digite o terceiro valor:"));
 
@@ -144,4 +144,44 @@ if (Number.isNaN(numero1) || Number.isNaN(numero2) || Number.isNaN(numero3) ) {
     if (numero2 > maior) maior = numero2; 
     if (numero3 > maior) maior = numero3 
         console.log("O maior número é:" + maior)
+}*/
+
+/*Peça dois números e uma operação (+, -, *, /). Use switch para calcular, com default para operações inválidas e checagem de divisão por zero.*/
+
+const numero1 = Number(prompt("Digite o primeiro número:"));
+const numero2 = Number(prompt("Digite o segundo número:"));
+const operacao = prompt("Digite a operação (+, -, *, /):");
+
+let resultado;
+
+if (Number.isNaN(numero1) || Number.isNaN(numero2)) {
+    console.log("Entrada inválida. Digite apenas números.");
+} else {
+
+    switch (operacao) {
+    case "+":
+        resultado = numero1 + numero2;
+        console.log(`Resultado: ${resultado}`);
+        break;
+    case "-":
+        resultado = numero1 - numero2;
+        console.log(`Resultado: ${resultado}`);
+        break;
+case "*":
+resultado = numero1 * numero2;
+console.log(`Resultado: ${resultado}`);
+break;
+case "/":
+    if (numero2 === 0) {
+        console.log("Erro: não é possível dividir por zero:");
+    } else {
+        resultado = numero1 / numero2;
+        console.log(`Resultado: ${resultado}`);
+    }
+    break;
+    default:
+        console.log("Operação inválida.");
+        
 }
+}
+
