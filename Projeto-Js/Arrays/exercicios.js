@@ -63,7 +63,7 @@ Dado um array de alunos `{ nome, nota }`, crie `mediaTurma(alunos)` e `melhorAlu
 Exemplo: com Ana 8, Bia 5.5 e Caio 7 → média `6.833...` e melhor aluno `{ nome: 'Ana', nota: 8 }`*/
 
 
-function mediaTurma(alunos) {
+/*function mediaTurma(alunos) {
     let soma = 0
     for (const aluno of alunos) {
         soma += aluno.nota;
@@ -89,4 +89,172 @@ const turma = [
 ];
 
 console.log(mediaTurma(turma).toFixed(2));
-console.log(melhorAluno(turma));
+console.log(melhorAluno(turma));*/
+
+/*==========================================================================================================================*/
+
+//Dado const nums = [1, 2, 3, 4, 5], use map para criar um array com o dobro de cada número
+
+/*const nums = [1, 2, 3, 4, 5];
+const numsDobro = nums.map((value =>  {
+return value * 2
+})); 
+console.log(numsDobro);*/
+
+/*========================================================================================================================================*/
+
+//Dado const nomes = ["ana", "bruno", "carla"], use map para devolver todos os nomes em letras maiúsculas.
+
+/*const nomes = ["ana", "bruno", "carla"];
+const maiúsculas = nomes.map(name => name.toUpperCase());
+
+console.log(maiúsculas);*/
+
+/*===========================================================================================================================================*/
+
+//Dado const precos = [100, 200, 50], use map para devolver os preços com 10% de aumento.
+
+/*const precos = [100, 200, 50];
+const aumento = precos.map(p => p + p * 0.1);
+
+console.log(aumento);*/
+
+/*==============================================================================================================================================*/
+
+//Dado um array de alunos com nome e nota, use map para obter só os nomes.
+
+/*const alunos = [
+    { nome: "Ana", nota: 8 },
+    { nome: "Bruno", nota: 5 },
+    { nome: "Carla", nota: 9 },
+];
+
+const nomes = alunos.map(aluno => aluno.nome)
+
+console.log(nomes);
+
+//Com o mesmo array de alunos, use map para gerar textos no formato "Ana: 8".
+
+const linhas = alunos.map(a => `${a.nome}: ${a.nota}`);
+
+console.log(linhas);*/
+
+/*========================================================================================================*/
+
+//Dado um array de produtos com nome e preco, devolva objetos com os mesmos campos e um novo campo precoFinal com 10% de desconto. O array original não pode mudar.
+
+/*const produtos = [
+    { nome: "Mouse", preco: 100 },
+    { nome: "Teclado", preco: 40 },
+];
+
+const precoFinal = produtos.map(p => {
+return {...p, precoFinal: p.preco * 0.9} 
+});
+
+console.log(precoFinal);
+console.log(produtos[0]);*/
+
+/*==============================================================================================================================*/
+
+//Numerar uma lista com index
+
+//Dado const fila = ["Ana", "Bia", "Caio"], use map com o segundo parâmetro (index) para gerar "1. Ana", "2. Bia"...
+
+/*const fila = ["Ana", "Bia", "Caio"];
+
+const nomes = fila.map((nome, index ) => `${index + 1}. ${nome}`);
+console.log(nomes);*/
+
+/*=============================================================================*/
+
+//Filter e map encadeados
+
+//Dado um array de itens com nome, qtd e preco, devolva objetos { nome, subtotal } apenas dos itens com qtd maior que 0. O subtotal é qtd * preco.
+
+/*const itens = [
+  { nome: "Caneta", qtd: 3, preco: 2 },
+  { nome: "Lápis", qtd: 0, preco: 1 },
+  { nome: "Caderno", qtd: 2, preco: 15 },
+];
+
+const resultado = itens
+.filter(p => p.qtd > 0)
+.map(p => ({
+    nome: p.nome, 
+    subtotal: p.qtd * p.preco,
+}));
+
+console.log(resultado);*/
+
+/*========================================================================================================*/
+
+//Dado const nums = [1, 2, 3, 4, 5, 6, 7, 8], use filter para ficar só com os números pares.
+
+/*const nums = [1, 2, 3, 4, 5, 6, 7, 8];
+
+const numsPar = nums.filter(n => n % 2 === 0);
+console.log(numsPar);*/
+
+/*=================================================================================================================*/
+
+//Duas condições
+
+//Dado um array de pessoas com nome, idade e ativo (true/false), devolva só as pessoas ativas e maiores de 18.
+
+/*const pessoas = [
+  { nome: "Ana", idade: 20, ativo: true },
+  { nome: "Bia", idade: 17, ativo: true },
+  { nome: "Caio", idade: 25, ativo: false },
+  { nome: "Duda", idade: 30, ativo: true },
+];
+
+const verificacao = pessoas.filter(p => p.ativo === true && p.idade >= 18)
+console.log(verificacao);*/
+
+//console.log(verificacao.map(p => p.nome));  ----> para mostrar apenas o nome.
+
+//==============================================================================================================================*/
+
+//Dado um array de títulos de filmes e o termo "ar", devolva os títulos que contêm o termo, sem diferenciar maiúsculas de minúsculas.
+
+/*const titulos = ["Star Wars", "Matrix", "Parasita", "Avatar"];
+
+const filmes = titulos.filter(f => f.toLowerCase().includes("ar"));
+console.log(filmes);*/
+
+//======================================================================================================================================
+
+//1: Remover um item pelo id
+//Dado um array de tarefas com id e texto, use filter para devolver a lista sem a tarefa de id 2.
+
+/*const tarefas = [
+  { id: 1, texto: "Estudar" },
+  { id: 2, texto: "Treinar" },
+  { id: 3, texto: "Dormir" },
+];
+
+const remover = tarefas.filter(r => r.id !== 2);
+console.log(remover);*/
+
+//========================================================================================================================
+
+/*Primeiro maior que 10
+Dado const nums = [4, 8, 12, 15, 3], use find para achar o primeiro número maior que 10.*/
+
+/*const nums = [4, 8, 12, 15, 3]
+
+const primeiro = nums.find(n => n > 10 );
+console.log(primeiro);*/
+
+//========================================================================================================
+
+//Dado um array de pessoas com nome e idade, ache a pessoa chamada "Bruno".
+/*const pessoas = [
+  { nome: "Ana", idade: 20 },
+  { nome: "Bruno", idade: 17 },
+  { nome: "Carla", idade: 30 },
+]
+
+const bruno = pessoas.find(p => p.nome === "Bruno");
+console.log(bruno);*/
